@@ -39,6 +39,14 @@ class ViewController: UIViewController
         
         var result1 = myInt1 * myInt2
        
+        if result1==64
+        {
+            let image1 = "yoshi.png"
+            let image = UIImage(named: image1)
+            let imageView = UIImageView(image: image!)
+            imageView.frame = CGRect(x: 100, y: 200, width: 200, height: 200)
+            view.addSubview(imageView)
+        }
         result.text = String(result1)
         print(result1)
     }
