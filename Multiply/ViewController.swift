@@ -29,10 +29,18 @@ class ViewController: UIViewController
 
     @IBAction func calculate(_ sender: Any)
     {
-        var one = Int(numberOne.text)
+        var firstNumString = numberOne.text ?? ""
          
-       var two = Int(numberTwo.text)
-  var result = one * two)
+   var two = numberTwo.text ?? ""
+
+        let myInt1 = Int(firstNumString) ?? 0
+        
+    let myInt2 = Int(two) ?? 0
+        
+        var result1 = myInt1 * myInt2
+       
+        result.text = String(result1)
+        print(result1)
     }
 
     
