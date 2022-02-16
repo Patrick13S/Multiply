@@ -49,7 +49,30 @@ class ViewController: UIViewController
         }
         result.text = String(result1)
         print(result1)
-    }
+        
+        numberOne.resignFirstResponder()
+        numberTwo.resignFirstResponder()
+        
+      
+
+       // for result1{
+            if(result1 % 2 == 0){
+                print("\(result1) is even")
+                let image2 = "funny cat.png"
+                let image = UIImage(named: image2)
+                let imageView = UIImageView(image: image!)
+                imageView.frame = CGRect(x: 100, y: 400, width: 200, height: 200)
+                view.addSubview(imageView)
+            }else{
+                print("\(result1) is odd")
+                let image3 = "funny cat2.png"
+                let image = UIImage(named: image3)
+                let imageView = UIImageView(image: image!)
+                imageView.frame = CGRect(x: 100, y: 400, width: 200, height: 200)
+                view.addSubview(imageView)
+            }
+        }
+    
 
     
 }
