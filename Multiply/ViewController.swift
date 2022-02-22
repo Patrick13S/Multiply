@@ -19,8 +19,12 @@ class ViewController: UIViewController
     // if
    // var result = (numberOne) * numberTwo
     
-  
-                            
+    @IBOutlet weak var imageView1: UIImageView!
+    
+    @IBOutlet weak var imageView2: UIImageView!
+    
+    @IBOutlet weak var imageView3: UIImageView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -41,11 +45,11 @@ class ViewController: UIViewController
        
         if result1==64
         {
-            let image1 = "yoshi.png"
+            let image1 = "yoshi"
             let image = UIImage(named: image1)
-            let imageView = UIImageView(image: image!)
-            imageView.frame = CGRect(x: 100, y: 200, width: 200, height: 200)
-            view.addSubview(imageView)
+    
+            imageView1.image = UIImage(named: "yoshi")
+           
         }
         result.text = String(result1)
         print(result1)
@@ -58,22 +62,41 @@ class ViewController: UIViewController
        // for result1{
             if(result1 % 2 == 0){
                 print("\(result1) is even")
-                let image2 = "funny cat.png"
-                let image = UIImage(named: image2)
-                let imageView = UIImageView(image: image!)
-                imageView.frame = CGRect(x: 100, y: 400, width: 200, height: 200)
-                view.addSubview(imageView)
+                let image2 = "funny cat"
+
+                imageView2.image = UIImage(named: "funny cat")
             }else{
                 print("\(result1) is odd")
-                let image3 = "funny cat2.png"
-                let image = UIImage(named: image3)
-                let imageView = UIImageView(image: image!)
-                imageView.frame = CGRect(x: 100, y: 400, width: 200, height: 200)
-                view.addSubview(imageView)
+                let image3 = "funny cat2"
+           
+                imageView3.image = UIImage(named: "funny cat2")
             }
         }
     
 
+    @IBAction func clear(_ sender: Any)
+    {
+        let image1 = "yoshi"
+        let image = UIImage(named: image1)
+        let image2 = "funny cat"
+        let image4 = UIImage(named: image2)
+        let image3 = "funny cat2"
+        let image5 = UIImage(named: image3)
+        imageView1.isHidden = true
+        imageView2.isHidden = true
+        imageView3.isHidden = true
+        numberOne.text = ""
+        numberTwo.text = ""
+        result.text = ""
+
+      //  is accessibilityElementsHidden image2
+       // (numberOne: UITextField) {
+            
+   //      textFieldShouldClear(_ numberOne: UITextField) -> Bool
+ // numberOne:UITextField = ""
+    //    var numberTwo.text = "0"
+        
+    }
     
 }
 
