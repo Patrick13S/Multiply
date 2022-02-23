@@ -49,7 +49,7 @@ class ViewController: UIViewController
             let image = UIImage(named: image1)
     
             imageView1.image = UIImage(named: "yoshi")
-           
+            imageView1.isHidden = false
         }
         result.text = String(result1)
         print(result1)
@@ -65,11 +65,13 @@ class ViewController: UIViewController
                 let image2 = "funny cat"
 
                 imageView2.image = UIImage(named: "funny cat")
+                imageView2.isHidden = false
             }else{
                 print("\(result1) is odd")
                 let image3 = "funny cat2"
            
                 imageView3.image = UIImage(named: "funny cat2")
+                imageView3.isHidden = false
             }
         }
     
